@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TSP Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background-color: white;
+            width: 60%;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        h2 { color: #2c3e50; }
+        .error {
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        .home-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .home-link:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if error %}
+            <h1 class="error">An error occurred. Input invalid.</h1>
+            <p>Please ensure your coordinates are valid numbers in format [(x,y), ...]</p>
+
+        {% else %}
+            <h1>The shortest path</h1>
+            <h2>Length is {{ distance }}</h2>
+
+            <p>The following table:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>From<br>To</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for step in steps %}
+                    <tr>
+                        <td>{{ step.id }}</td>
+                        <td>
+                            {{ step.from }}<br><br>
+                            {{ step.to }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+
+        <a href="/" class="home-link">Return to home page</a>
+    </div>
+</body>
+</html>
