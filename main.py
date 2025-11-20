@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, redirect, url_for
 import math
 import itertools
+from urllib.parse import unquote
 
 app = Flask(__name__)
 
@@ -41,6 +42,9 @@ def home():
 
     # If locations ARE provided, process the TSP logic
     try:
+        # URL decode the parameter first (in case it's encoded)
+        locations_str = unquote(locations_str)
+
         # Parse the input string using eval() as suggested
         # Note: In a production environment, ast.literal_eval is safer,
         # but we are following the assignment hints.
