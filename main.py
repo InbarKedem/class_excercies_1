@@ -14,6 +14,7 @@ def validate_input(locations_data):
     """
     Validates that input is a list of tuples/lists,
     contains only numbers, and has dimension 2.
+    Accepts both positive and negative numbers.
     """
     if not isinstance(locations_data, list):
         return False
@@ -23,8 +24,8 @@ def validate_input(locations_data):
         # Check if point is tuple or list and has exactly 2 coordinates
         if not isinstance(point, (list, tuple)) or len(point) != 2:
             return False
-        # Check if coordinates are numbers (int or float)
-        if not all(isinstance(coord, (int, float)) for coord in point):
+        # Check if coordinates are numbers (int or float) - both positive and negative
+        if not all(isinstance(coord, (int, float)) and not isinstance(coord, bool) for coord in point):
             return False
     return True
 
@@ -49,7 +50,7 @@ def home():
         if not validate_input(locations):
             raise ValueError("Invalid input format")
 
-        # TSP Logic
+        # ...existing code...
         start_node = (0, 0)
         min_distance = float('inf')
         best_path = []
