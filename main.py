@@ -50,7 +50,7 @@ def home():
         if not validate_input(locations):
             raise ValueError("Invalid input format")
 
-        # ...existing code...
+        # TSP Logic
         start_node = (0, 0)
         min_distance = float('inf')
         best_path = []
@@ -87,8 +87,11 @@ def home():
             steps=steps
         )
 
-    except Exception:
+    except Exception as e:
         # In case of any error (parsing or logic), show error message
+        print(f"Error: {e}")
+        import traceback
+        traceback.print_exc()
         return render_template('results.html', error=True)
 
 
