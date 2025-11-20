@@ -61,22 +61,20 @@
             <h1>The shortest path</h1>
             <h2>Length is {{ distance }}</h2>
 
-            <p>The following table:</p>
             <table>
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>From<br>To</th>
+                        <th></th>
+                        <th>From</th>
+                        <th>To</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for step in steps %}
                     <tr>
                         <td>{{ step.id }}</td>
-                        <td>
-                            {{ step.from }}<br><br>
-                            {{ step.to }}
-                        </td>
+                        <td>{{ step.from }}</td>
+                        <td>{{ step.to }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
