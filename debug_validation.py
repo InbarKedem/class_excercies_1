@@ -1,5 +1,10 @@
 #!/usr/bin/env python
-"""Direct inline test of validation"""
+"""Direct inline test of validation
+Group 30
+Oz Levi - 209999739
+Inbar Kedem - 325298438
+Eylon Chodnik - 325130417
+"""
 
 # Test data
 locations_data = [(1, 1), (-1, -1), (2, 3)]

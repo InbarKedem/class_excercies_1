@@ -1,5 +1,10 @@
 #!/usr/bin/env python
-"""Test URL parameter parsing"""
+"""Test URL parameter parsing
+Group 30
+Oz Levi - 209999739
+Inbar Kedem - 325298438
+Eylon Chodnik - 325130417
+"""
 
 # Simulating what Flask receives
 test_urls = [

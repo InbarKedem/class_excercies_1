@@ -1,5 +1,10 @@
 #!/usr/bin/env python
-"""Test validation with negative numbers"""
+"""Test validation with negative numbers
+Group 30
+Oz Levi - 209999739
+Inbar Kedem - 325298438
+Eylon Chodnik - 325130417
+"""
 
 def validate_input(locations_data):
     """

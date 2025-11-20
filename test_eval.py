@@ -1,5 +1,10 @@
 #!/usr/bin/env python
-"""Test eval with negative numbers"""
+"""Test eval with negative numbers
+Group 30
+Oz Levi - 209999739
+Inbar Kedem - 325298438
+Eylon Chodnik - 325130417
+"""
 
 test_strings = [
     "[(1, 1), (-1, -1), (2, 3)]",

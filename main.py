@@ -1,3 +1,11 @@
+"""
+Traveling Salesman Problem (TSP) Solver Web Application
+Group 30
+Oz Levi - 209999739
+Inbar Kedem - 325298438
+Eylon Chodnik - 325130417
+"""
+
 from flask import Flask, request, render_template, redirect, url_for
 import math
 import itertools

@@ -1,5 +1,10 @@
 #!/usr/bin/env python
-"""Test TSP calculation with the expected example"""
+"""Test TSP calculation with the expected example
+Group 30
+Oz Levi - 209999739
+Inbar Kedem - 325298438
+Eylon Chodnik - 325130417
+"""
 
 import math
 import itertools
